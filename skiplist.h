@@ -1,8 +1,7 @@
 /* ************************************************************************
 > File Name:     skiplist.h
-> Author:        sunxiuyang
-> Mail:          sunxiuyang04@gmail.com 
-> Created Time:  Sun Dec  2 19:04:26 2018
+> Author:        Aaron Zhao 
+> Created Time:  April 2021
 > Description:   
  ************************************************************************/
 
@@ -125,28 +124,6 @@ Node<K, V>* SkipList<K, V>::create_node(const K k, const V v, int level) {
 }
 
 // Insert given key and value in skip list 
-// return 1 means element exists  
-// return 0 means insert successfully
-/* 
-                           +------------+
-                           |  insert 50 |
-                           +------------+
-level 4     +-->1+                                                      100
-                 |
-                 |                      insert +----+
-level 3         1+-------->10+---------------> | 50 |          70       100
-                                               |    |
-                                               |    |
-level 2         1          10         30       | 50 |          70       100
-                                               |    |
-                                               |    |
-level 1         1    4     10         30       | 50 |          70       100
-                                               |    |
-                                               |    |
-level 0         1    4   9 10         30   40  | 50 |  60      70       100
-                                               +----+
-
-*/
 template<typename K, typename V>
 int SkipList<K, V>::insert_element(const K key, const V value) {
     
@@ -332,24 +309,6 @@ void SkipList<K, V>::delete_element(K key) {
 }
 
 // Search for element in skip list 
-/*
-                           +------------+
-                           |  select 60 |
-                           +------------+
-level 4     +-->1+                                                      100
-                 |
-                 |
-level 3         1+-------->10+------------------>50+           70       100
-                                                   |
-                                                   |
-level 2         1          10         30         50|           70       100
-                                                   |
-                                                   |
-level 1         1    4     10         30         50|           70       100
-                                                   |
-                                                   |
-level 0         1    4   9 10         30   40    50+-->60      70       100
-*/
 template<typename K, typename V> 
 bool SkipList<K, V>::search_element(K key) {
 
@@ -412,4 +371,3 @@ int SkipList<K, V>::get_random_level(){
     k = (k < _max_level) ? k : _max_level;
     return k;
 };
-// vim: et tw=100 ts=4 sw=4 cc=120
