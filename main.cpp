@@ -1,10 +1,10 @@
 /* ************************************************************************
-> File Name:     main.cpp
-> Author:        sunxiuyang
-> Mail:          sunxiuyang04@gmail.com 
-> Created Time:  Sun Dec  2 20:21:41 2018
+> File Name:     skiplist.h
+> Author:        Aaron Zhao 
+> Created Time:  April 2021
 > Description:   
  ************************************************************************/
+
 #include <iostream>
 #include "skiplist.h"
 #define FILE_PATH "./store/dumpFile"
