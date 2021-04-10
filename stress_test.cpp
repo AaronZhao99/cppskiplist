@@ -1,8 +1,7 @@
 /* ************************************************************************
-> File Name:     stress_test.cpp
-> Author:        sunxiuyang
-> Mail:          sunxiuyang@baidu.com 
-> Created Time:  Sun 16 Dec 2018 11:56:04 AM CST
+> File Name:     skiplist.h
+> Author:        Aaron Zhao 
+> Created Time:  April 2021
 > Description:   
  ************************************************************************/
 
@@ -72,38 +71,7 @@ int main() {
         std::chrono::duration<double> elapsed = finish - start;
         std::cout << "insert elapsed:" << elapsed.count() << std::endl;
     }
-    // skipList.displayList();
-
-    // {
-    //     pthread_t threads[NUM_THREADS];
-    //     int rc;
-    //     int i;
-    //     auto start = std::chrono::high_resolution_clock::now();
-
-    //     for( i = 0; i < NUM_THREADS; i++ ) {
-    //         std::cout << "main() : creating thread, " << i << std::endl;
-    //         rc = pthread_create(&threads[i], NULL, getElement, (void *)i);
-
-    //         if (rc) {
-    //             std::cout << "Error:unable to create thread," << rc << std::endl;
-    //             exit(-1);
-    //         }
-    //     }
-
-    //     void *ret;
-    //     for( i = 0; i < NUM_THREADS; i++ ) {
-    //         if (pthread_join(threads[i], &ret) !=0 )  {
-    //             perror("pthread_create() error"); 
-    //             exit(3);
-    //         }
-    //     }
-
-    //     auto finish = std::chrono::high_resolution_clock::now(); 
-    //     std::chrono::duration<double> elapsed = finish - start;
-    //     std::cout << "get elapsed:" << elapsed.count() << std::endl;
-    // }
-
-	pthread_exit(NULL);
+    	pthread_exit(NULL);
     return 0;
 
 }
