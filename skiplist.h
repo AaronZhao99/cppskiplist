@@ -2,7 +2,7 @@
 > File Name:     skiplist.h
 > Author:        Aaron Zhao 
 > Created Time:  April 2021
-> Description:   
+> Description:   This is the header file of the skiplist project, and all functions are implemented in C++ in this file  
  ************************************************************************/
 
 #include <iostream> 
