@@ -12,8 +12,8 @@
 #include <time.h>
 #include "skiplist.h"
 
-#define NUM_THREADS 1
-#define TEST_COUNT 100000
+int const NUM_THREADS = 1
+int const TEST_COUNT = 100000
 SkipList<int, std::string> skipList(18);
 
 void *insertElement(void* threadid) {
